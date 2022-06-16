@@ -1,2 +1,2 @@
 <?php 
-echo "php";
+require_once './autoLoader/AutoLoader.php';
