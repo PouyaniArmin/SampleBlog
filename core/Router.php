@@ -23,7 +23,7 @@ class Router{
         return $this->renderView($callback);
     }
     public function renderView($view){
-        require_once Application::$path."/view/home.php";
+        require_once Application::$path."/views/home.php";
     }
-
+    
 }
