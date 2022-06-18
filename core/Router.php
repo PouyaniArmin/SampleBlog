@@ -20,6 +20,7 @@ class Router{
         if(!is_string($callback)){
             return "Not Found";
         }
+        
         if(is_string($callback)){
         return $this->renderView($callback);
         }
