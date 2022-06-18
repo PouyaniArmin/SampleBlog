@@ -20,7 +20,10 @@ class Router{
         if(!is_string($callback)){
             return "Not Found";
         }
-
+        return $this->renderView($callback);
     }
-
+    public function renderView($view){
+        $test= __DIR__."/view/$view.php";
+        echo $test;
+    }
 }
