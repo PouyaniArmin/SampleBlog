@@ -1,11 +1,14 @@
 <?php 
 namespace core;
 use core\Request;
+use core\Response;
 class Router{
     public Request $request;
+    public Response $response;
     public array $routers;
-    public function __construct(Request $request){
+    public function __construct(Request $request,Response $response){
         $this->request=$request;
+        $this->response=$response;
     }
     public function get($path,$callback){
         $this->routers['get'][$path]=$callback;
@@ -18,9 +21,10 @@ class Router{
         $method= $this->request->method();
         $callback=$this->routers[$method][$path] ?? false;
         if(!is_string($callback)){
+            $this->response->statusCode(404);
             return "Not Found";
         }
-        
+
         if(is_string($callback)){
         return $this->renderView($callback);
         }
