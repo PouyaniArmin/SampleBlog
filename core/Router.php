@@ -23,7 +23,14 @@ class Router{
         return $this->renderView($callback);
     }
     public function renderView($view){
+        
+    }
+    public function renderLayout(){
+        ob_start();
+        require_once Application::$path."/views/layouts/main.php";
+        return ob_get_clean();
+    }
+    public function renderOnlyView($view){
         require_once Application::$path."/views/home.php";
     }
-    
 }
