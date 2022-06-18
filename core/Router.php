@@ -23,7 +23,7 @@ class Router{
         return $this->renderView($callback);
     }
     public function renderView($view){
-        $test= __DIR__."/view/$view.php";
+        
         echo $test;
     }
 }
