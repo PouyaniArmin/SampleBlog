@@ -5,7 +5,7 @@ class Request{
     public function path(){
         $path=$_SERVER['REQUEST_URI'] ?? '';
         $position=strpos($path,'?');
-        if(!$position){
+        if($position===false){
             return $path;
         }
         return substr($path,0,$position);
