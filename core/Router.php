@@ -20,10 +20,15 @@ class Router{
         if(!is_string($callback)){
             return "Not Found";
         }
+        if(is_string($callback)){
         return $this->renderView($callback);
+        }
+        return call_user_func($callback);
     }
     public function renderView($view){
-        
+        $layoutView=$this->renderLayout();
+        $contentView=$this->renderOnlyView($view);
+        return str_replace("{{content}}",$contentView,$layoutView);
     }
     public function renderLayout(){
         ob_start();
@@ -31,6 +36,8 @@ class Router{
         return ob_get_clean();
     }
     public function renderOnlyView($view){
+        ob_start();
         require_once Application::$path."/views/home.php";
+        return ob_get_clean();
     }
 }
