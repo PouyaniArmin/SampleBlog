@@ -43,10 +43,10 @@ class Router
 
         return call_user_func($callback,$this->request);
     }
-    public function renderView($view)
+    public function renderView($view,$params=[])
     {
         $layoutView = $this->renderLayout();
-        $contentView = $this->renderOnlyView($view);
+        $contentView = $this->renderOnlyView($view,$params);
         return str_replace("{{content}}", $contentView, $layoutView);
     }
     public function renderLayout()
@@ -55,7 +55,7 @@ class Router
         require_once Application::$path . "/views/layouts/main.php";
         return ob_get_clean();
     }
-    public function renderOnlyView($view)
+    public function renderOnlyView($view,$params)
     {
         ob_start();
         require_once Application::$path . "/views/$view.php";
