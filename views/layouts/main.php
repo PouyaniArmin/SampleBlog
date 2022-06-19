@@ -22,16 +22,8 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/document" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Document
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Php</a></li>
-            <li><a class="dropdown-item" href="#">Sql</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/document">Document</a>
         </li>
       </ul>
       <ul class="navbar-nav  ml-2 mb-lg-0">
