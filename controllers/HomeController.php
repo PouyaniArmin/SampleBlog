@@ -1,8 +1,11 @@
 <?php
 
 namespace controllers;
+
+use core\Application;
+
 class HomeController{
     public function index(){
-        echo "something data";
+        return Application::$app->router->renderView('home');
     }
 }
