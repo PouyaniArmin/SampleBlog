@@ -51,8 +51,9 @@ class Router
     }
     public function renderLayout()
     {
+        $layout=Application::$app->controller->layout;
         ob_start();
-        require_once Application::$path . "/views/layouts/main.php";
+        require_once Application::$path . "/views/layouts/$layout.php";
         return ob_get_clean();
     }
     public function renderOnlyView($view,$params)
