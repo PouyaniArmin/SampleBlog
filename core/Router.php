@@ -42,7 +42,7 @@ class Router{
     }
     public function renderOnlyView($view){
         ob_start();
-        require_once Application::$path."/views/home.php";
+        require_once Application::$path."/views/$view.php";
         return ob_get_clean();
     }
 }
