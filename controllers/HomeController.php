@@ -3,9 +3,10 @@
 namespace controllers;
 
 use core\Application;
+use core\Controller;
 
-class HomeController{
+class HomeController extends Controller{
     public function index(){
-        return Application::$app->router->renderView('home');
+        return $this->view('home');
     }
 }
