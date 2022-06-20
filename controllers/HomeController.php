@@ -7,6 +7,7 @@ use core\Controller;
 
 class HomeController extends Controller{
     public function index(){
-        return $this->view('home');
+        $data=['name'=>'armin'];
+        return $this->view('home',['name'=>'armin']);
     }
 }

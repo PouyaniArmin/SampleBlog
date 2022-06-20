@@ -43,7 +43,7 @@ class Router
 
         return call_user_func($callback,$this->request);
     }
-    public function renderView($view,$params=[])
+    public function renderView($view,$params)
     {
         $layoutView = $this->renderLayout();
         $contentView = $this->renderOnlyView($view,$params);
@@ -58,8 +58,8 @@ class Router
     }
     public function renderOnlyView($view,$params)
     {
-        foreach($params as $key=>$value){
-            $$key=$value;
+        foreach($params as $key=>$value){   
+            $$key=$value; 
         }
         ob_start();
         require_once Application::$path . "/views/$view.php";
