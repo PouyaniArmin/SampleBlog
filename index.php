@@ -12,4 +12,5 @@ $app->router->get('/',[HomeController::class,'index']);
 $app->router->get('/document',[DocumentController::class,'index']);
 $app->router->get('/login',[LoginController::class,'index']);
 $app->router->get('/register',[RegisterController::class,'index']);
+$app->router->post('/register',[RegisterController::class,'index']);
 $app->run();
