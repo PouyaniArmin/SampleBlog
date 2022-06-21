@@ -1,4 +1,3 @@
-<div class="container">
     <form action="" method="post">
         <div class="row">
             <div class="col">
@@ -32,4 +31,3 @@
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-</div>

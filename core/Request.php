@@ -14,11 +14,12 @@ class Request{
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
 
-    public function isGet(){
+    
+    public function is_Get(){
         return $this->method()==='get';
     }
-    public function isPost(){
-        return $this->method()==='post'; 
+    public function is_Post(){
+        return $this->method()==='post';
     }
     public function body(){
         $body=[];
