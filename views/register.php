@@ -1,5 +1,5 @@
 <div class="container">
-    <form>
+    <form action="" method="post">
         <div class="row">
             <div class="col">
                 <div class="form-group">
