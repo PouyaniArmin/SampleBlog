@@ -3,7 +3,7 @@
             <div class="col">
                 <div class="form-group">
                     <label>FirstName</label>
-                    <input type="text" class="form-control" placeholder="Enter firstname" name="firstnmae">
+                    <input type="text" class="form-control" placeholder="Enter firstname" name="firstname">
                 </div>
             </div>
             <div class="col">
@@ -20,8 +20,8 @@
         </div>
         <br>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="password">
         </div>
         <br>
         <div class="form-group">

@@ -14,9 +14,9 @@ class RegisterController extends Controller
     {
         $test = new ModelRegisterModel();
         if ($request->is_Post()) {
+            $test->loadData($request->body());
             if ($test->validate() && $test->register()) {
-                echo "test";
-                exit;
+                return "yes";
             }
         }
         return $this->view('register');
