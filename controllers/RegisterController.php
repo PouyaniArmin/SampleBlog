@@ -12,11 +12,13 @@ class RegisterController extends Controller
 {
     public function index(Request $request)
     {
-
-        if($request->is_Post()){
-           $test=new ModelRegisterModel();
-           $test->register();
+        $test = new ModelRegisterModel();
+        if ($request->is_Post()) {
+            if ($test->validate() && $test->register()) {
+                echo "test";
+                exit;
+            }
         }
-        return $this->view('register');   
+        return $this->view('register');
     }
 }
