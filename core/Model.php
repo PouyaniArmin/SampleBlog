@@ -22,6 +22,8 @@ abstract class Model
     abstract function rules():array;
 
     public function validate(){
-
+        foreach($this->rules() as $rules){
+            var_dump($rules);
+        }
     }
 }
