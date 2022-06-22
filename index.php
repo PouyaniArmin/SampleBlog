@@ -6,7 +6,7 @@ use core\Application;
 use controllers\LoginController;
 use controllers\RegisterController;
 
-require_once './autoLoader/AutoLoader.php';
+require_once './vendor/AutoLoader.php';
 $app=new Application(__DIR__);
 $app->router->get('/',[HomeController::class,'index']);
 $app->router->get('/document',[DocumentController::class,'index']);

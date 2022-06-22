@@ -1,6 +1,6 @@
 <?php
 
-namespace autoLoader;
+namespace vendor;
 
 class AutoLoader
 {
@@ -16,9 +16,9 @@ class AutoLoader
      */
     public function load($class)
     {
-        $path = __DIR__ . "/$class.php";
-        $path = str_replace("\\", "/", $path);
-        $path = str_replace('/autoLoader', '', $path);
+        $path=__DIR__."/$class.php";
+        $path=str_replace("\\","/",$path);
+        $path=str_replace('/vendor','',$path);
         require_once($path);
     }
 }
