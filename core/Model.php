@@ -37,11 +37,11 @@ abstract class Model
                     $this->addError($attribute,self::RULE_EMAIL);
                 }
 
-                if($ruleName===self::RULE_MIN && strlen($value) > $rule['min']){
+                if($ruleName===self::RULE_MIN && strlen($value) < $rule['min']){
                     $this->addError($attribute,self::RULE_MIN);
                 }
 
-                if($ruleName===self::RULE_MAX && strlen($value) < $rule['max']){
+                if($ruleName===self::RULE_MAX && strlen($value) > $rule['max']){
                     $this->addError($attribute,self::RULE_MAX);
                 }
 
